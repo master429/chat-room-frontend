@@ -1,7 +1,6 @@
 import { Button, Form, Input, message } from "antd";
 import { useForm } from "antd/es/form/Form";
 import "./index.css";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import {
   getUserInfo,
@@ -24,7 +23,7 @@ const layout1 = {
 
 export function UpdateInfo() {
   const [form] = useForm();
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   const onFinish = async (values: UserInfo) => {
     try {
@@ -76,7 +75,7 @@ export function UpdateInfo() {
       }
     }
     query();
-  }, []);
+  }, [form]);
 
   return (
     <div id="updateInfo-container">
